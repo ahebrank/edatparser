@@ -1,0 +1,8 @@
+Package: edat_txt_parser
+Title: Parse e-Prime edat.txt or edat2.txt "recovery" files
+Version: 0.1
+Authors@R: "Andy Hebrank <ahebrank@gmail.com> [aut, cre]"
+Description: Got some e-Prime data output you want in R?  Read in the txt recovery files for a managable R list structure.
+Depends: R (>= 3.1.2)
+License: MIT
+LazyData: true
