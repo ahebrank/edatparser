@@ -24,11 +24,13 @@ as.data.frame.edat <- function(edat, simplify = FALSE) {
   if (simplify) {
     df <- .simplify_data_frame(df)
   }
+  df
 }
 
 get_date <- function(edat) {
   stopifnot(class(edat)=="edat")
   date_array <- unlist(strsplit(edat$header_info['SessionDate'], '-'))
+  # edat has date in mm-dd-yyyy format
   paste0(date_array[c(3,1,2)], collapse='-')
 }
 
@@ -41,3 +43,5 @@ get_session <- function(edat) {
 }
 
 test3 <- edat('words_norming-953-1.txt')
+test2 <- edat('scene-961-3.txt')
+df <- as.data.frame(test2, simplify = TRUE)
