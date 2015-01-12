@@ -41,7 +41,3 @@ get_subject_number <- function(edat) {
 get_session <- function(edat) {
   .get_numeric_header(edat, 'Session')
 }
-
-test3 <- edat('words_norming-953-1.txt')
-test2 <- edat('scene-961-3.txt')
-df <- as.data.frame(test2, simplify = TRUE)
