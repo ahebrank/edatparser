@@ -14,7 +14,7 @@ The easiest way is to use devtools' `install_github` function.
 
 ```
 > install.packages('devtools')
-> devtools::install_github('ahebrank/edat-txt-parser')
+> devtools::install_github('ahebrank/edatparser')
 ```
 
 ### Using the parser
