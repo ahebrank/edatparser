@@ -2,7 +2,7 @@
 
 .simplify_data_frame <- function(df) {
   # remove any irrelevant columns
-  unique_values <- (plyr::laply(df, function(x) { length(unique(x)) })) > 1
+  unique_values <- (plyr::laply(df, function(x) { length(unique(x[!is.na(x)])) })) > 1
   df[,unique_values]
 }
 
