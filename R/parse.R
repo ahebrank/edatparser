@@ -17,10 +17,10 @@ edat <- function(txt_filename) {
 }
 
 # return trial info as a dataframe
-as.data.frame.edat <- function(edat, simplify = FALSE) {
+as.data.frame.edat <- function(edat, simplify = FALSE, factors=FALSE) {
   stopifnot(class(edat)=="edat")
   trials <- edat$trial_info
-  df <- plyr::rbind.fill(lapply(trials, function(x) { data.frame(t(x)) }))
+  df <- plyr::rbind.fill(lapply(trials, function(x) { data.frame(t(x), stringsAsFactors=factors) }))
   if (simplify) {
     df <- .simplify_data_frame(df)
   }
