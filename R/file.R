@@ -9,7 +9,7 @@
 .look_for <- function(strings, needle) {
   i <- grep(needle, strings)
   if (length(i)==0) {
-    warning(sprintf('%s not found in file. Did experiment terminate early?', match))
+    warning(sprintf('%s not found in file. Did experiment terminate early?', needle))
   }
   i
 }
