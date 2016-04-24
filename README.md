@@ -20,7 +20,7 @@ The easiest way is to use devtools' `install_github` function.
 ### Using the parser
 
 ```
-library('edat-txt-parser')
+library('edatparser')
 e <- edat('Flanker-1001-1.txt')
 dat <- as.data.frame(e)
 
